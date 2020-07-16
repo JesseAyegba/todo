@@ -1,0 +1,13 @@
+{% extends "user_reg/base.htm" %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<form action="" method="POST">
+    {% csrf_token %}
+    <div class="form-wrapper">
+        {{form | crispy }}
+        <button class="btn btn-outline-success btn-sm" type="submit">Login</button>
+    </div>
+
+</form>
+{% endblock content%}

@@ -1,0 +1,21 @@
+body {
+    padding: 0px;
+    margin: 0px;
+}
+.body-wrapper {
+    height: 100vh !important;
+}
+.top-nav-wrapper {
+    background-color: black;
+    color: white;
+    height: 40px;
+}
+.nav-content-wrapper {
+    display: grid;
+    grid-template-columns: 0.01fr 1fr;
+    height: 100vh;
+}
+.side-nav-wrapper {
+    background-color: black;
+    color: white;
+}
