@@ -1,13 +1,18 @@
-{% extends "user_reg/base.htm" %}
+{% extends "todo_app/base.htm" %}
 {% load crispy_forms_tags %}
 
+{% block title %}Login{% endblock title %}
 {% block content %}
-<form action="" method="POST">
-    {% csrf_token %}
-    <div class="form-wrapper">
-        {{form | crispy }}
-        <button class="btn btn-outline-success btn-sm" type="submit">Login</button>
-    </div>
-
-</form>
-{% endblock content%}
+<div class="login-form-wrapper">
+    <h4 class="display-4 text-center">Login</h4>
+    <hr class="bg-light">
+    <form action="" method="POST">
+        {% csrf_token %}
+        <div>
+            {{form | crispy }}
+            <button class="btn-stretch btn btn-success" type="submit">Login</button>
+        </div>
+    </form>
+    <p class="text-muted mt-2">Don't have an account? <a href="{% url 'user_registration' %}">Sign up</a></p>
+</div>
+{% endblock content %}

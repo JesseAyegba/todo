@@ -1,6 +1,11 @@
-{% extends "user_reg/base.htm" %}
+{% extends "todo_app/base.htm" %}
 
+{% block title %}Logout{% endblock title %}
 {% block content %}
-Thanks for Your time.
-<a href="{% url 'login' %}">Login again</a>
+<div class="container  logout-style">
+    <h3 class="display-4">Thanks for Your time.</h3>
+    <div class="display-4">
+        <a href="{% url 'login' %}">Login again</a>
+    </div>
+</div>
 {% endblock content %}

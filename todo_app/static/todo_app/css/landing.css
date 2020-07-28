@@ -1,0 +1,128 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: black;
+    color: white;
+    text-align: center;
+    animation-name: body;
+    animation-duration: 3s;
+    animation-fill-mode: forwards   ;
+}
+@keyframes body {
+    0%{
+        background-color: black;
+        color: lightslategray;
+        
+    }
+    50%{
+        background-color: rgb(8, 0, 15);
+        color: lightslategray;
+    }
+    100%{
+        background-color: rgb(19, 0, 37);
+        color: white;
+    }
+}
+.content-wrapper {
+    width: 70%;
+    margin-top: 20vh;
+    margin-left: auto;
+    font-family: 'Recursive', sans-serif;
+    margin-right: auto;
+    animation-name: content-wrapper;
+    animation-duration: 2s;
+    animation-delay: 3s;
+}
+@keyframes content-wrapper {
+
+}
+h5 {
+    font-size: 20px; 
+ }
+.welcome-wrapper {
+    position: relative;
+    opacity: 0;
+    top: -1000px;
+    font-size: 30px;
+    animation-name: welcome;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes welcome {
+    0%{
+        top: -1000px;
+        opacity: 0;
+    }
+    100%{
+        top: 0px;
+        opacity: 1;
+    }
+}
+.name {
+    position: relative;
+    left: -1000px;
+    animation-name: name;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+@keyframes name {
+    0%{
+        left: -1000px;
+    }
+    100%{
+        left: 0px;
+    }
+}
+.btn {
+    position: relative;
+    text-decoration: none;
+    right: -1000px;
+    color: lightseagreen;
+    display: inline-block;
+    padding: 12px 24px;
+    font-family: 'Recursive', sans-serif;
+    border: 1px lightseagreen solid;
+    transform: rotateY(180deg);
+    animation-name: btn;
+    animation-duration: 2s;
+    animation-delay: 1.5s;
+    animation-fill-mode: forwards;
+    transition: 0.5s;
+}
+.btn:hover {
+    background-color: lightseagreen;
+    color: white;
+    border: 1px lightseagreen solid;
+}
+@keyframes btn {
+    0%{
+        right: -1000px;
+        transform: rotateY(180deg);
+    }
+    100%{
+        right: 0px;
+        transform: rotateY(360deg);
+    }
+}
+@media (max-width: 992px) {
+    h5 {
+        font-size: 15px; 
+     }
+}
+@media (max-width: 768px) {
+    .welcome-wrapper {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .welcome-wrapper {
+        font-size: 15px;
+    }
+    h5 {
+       font-size: 12px; 
+    }
+}
+

@@ -1,0 +1,16 @@
+{% extends "todo_app/base.htm" %}
+
+{% block title %}Update{% endblock title %}
+{% block content %}
+<div class="content-wrapper">
+    <form method="POST">
+        {%csrf_token%}
+        <div class="form">
+            {{form}}
+        </div>
+        <div class="todo-btn mt-2">
+            <button class="btn btn-outline-success" type="submit">Update</button>
+        </div>
+    </form>
+</div>
+{% endblock content %}
