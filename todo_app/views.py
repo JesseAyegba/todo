@@ -63,7 +63,7 @@ def update_item(request, item_id):
 
 @login_required(login_url="login")
 def clear_list(request):
-    user = User.objects.get(username=request.user.username)
+    user = request.user
     user_item_set = user.todo_set.all()
     user_item_set.delete()
     return redirect("home")

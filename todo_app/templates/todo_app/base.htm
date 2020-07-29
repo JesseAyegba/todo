@@ -41,8 +41,10 @@
     </nav>
     {% if messages %}
     {% for message in messages %}
-    <div class=" container-fluid alert alert-{{message.tags}} text-center">
-        {{message}}
+    <div class="main-message-wrapper">
+        <div class=" alert alert-{{message.tags}}  message-wrapper">
+            {{message}}
+        </div>
     </div>
 
     {% endfor %}

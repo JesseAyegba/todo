@@ -50,8 +50,16 @@ h5 {
 }
 
 @keyframes welcome {
-    0%{
+    25%{
         top: -1000px;
+        opacity: 0;
+    }
+    50%{
+        top: -500px;
+        opacity: 0;
+    }
+    75%{
+        top: -250px;
         opacity: 0;
     }
     100%{

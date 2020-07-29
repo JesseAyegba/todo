@@ -16,6 +16,29 @@ nav {
     z-index: 2;
     top:0;
 }
+.main-message-wrapper {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    opacity: 1;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    animation-name: message;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+}
+@keyframes message{
+    0%{
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Lobster', cursive;
 }
@@ -33,7 +56,12 @@ h1, h2, h3, h4, h5, h6 {
 .logo-wrapper h2 a {
     text-decoration: none;
     color: rgb(94, 94, 255);
+    transition: 0.5s;
 }
+.logo-wrapper h2 a:hover {
+    color: rgb(191, 191, 255);
+}
+
 .links {
     display: flex;
     justify-content: space-evenly;
