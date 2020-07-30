@@ -102,6 +102,7 @@ h1, h2, h3, h4, h5, h6 {
     height: 100%;
     margin-bottom: 5px;
     font-size: 20px;
+
 }
 .todo-btn button {
     width: 100%;
@@ -126,8 +127,11 @@ h1, h2, h3, h4, h5, h6 {
 
 }
 .item-wrapper a {
+    display: inline-block;
     text-decoration: none;
     color: white;
+    font-size: 20px;
+    font-weight: bold;
 }
 .li-class {
     display: flex;
@@ -295,6 +299,7 @@ h1, h2, h3, h4, h5, h6 {
         transition: transform 0.5s;
         z-index: 1;
     }
+    
 }
 @media  (max-width: 576px){
     .content-wrapper {
@@ -346,7 +351,7 @@ h1, h2, h3, h4, h5, h6 {
     }
     .links {
         position: absolute;
-        top: 11%;
+        top: 9%;
         left: 0;
         background-color: rgb(19, 0, 37);
         height: 100vh;
@@ -359,6 +364,7 @@ h1, h2, h3, h4, h5, h6 {
     .logout-style {
         font-size: 30px !important;
     }
+    
 }
 
 .toggle-nav {
