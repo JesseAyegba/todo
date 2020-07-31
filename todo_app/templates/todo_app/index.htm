@@ -1,4 +1,5 @@
 {% extends 'todo_app/base.htm' %}
+{% load crispy_forms_tags %}
 
 {% block title %}Dashboard{% endblock title %}
 {% block content %}
@@ -6,7 +7,7 @@
     <form class="todo-form-wrapper" method="POST" action="{% url 'home' %}">
         {% csrf_token %}
         <div class="form">
-            {{form}}
+            {{ form | crispy }}
         </div>
         <div class="todo-btn">
             <button class="btn btn-outline-success" type="submit">Add item</button>

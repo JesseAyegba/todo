@@ -14,10 +14,9 @@ def user_registration(request):
             messages.success(request, f"Account Successfully created. You can now login")
             form.save()
             return redirect("login")
-        else: 
-            messages.warning(request, f"Something went wrong. Please try a different Username.")
-            
-    form = CreateUserForm()
+    else:        
+        form = CreateUserForm()
+
     context = {
         "form": form,
     }
@@ -26,8 +25,6 @@ def user_registration(request):
 
 @login_checker
 def login_page(request):
-    form = UserLoginForm()
-
     if request.method == "POST":
         form = UserLoginForm(request.POST)
         if form.is_valid():
@@ -39,10 +36,8 @@ def login_page(request):
             if user is not None:
                 login(request, user)
                 return redirect("home")
-            else:
-                messages.warning(request, f"Your username or password may be incorrect")
-                return redirect("login")
-
+    else: 
+        form = UserLoginForm()
     context = {
         "form": form,
     }
