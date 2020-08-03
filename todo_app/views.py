@@ -6,7 +6,7 @@ from django.contrib import messages
 from django.utils import timezone
 from django.contrib.auth.models import User
 from user_reg.decorators import login_checker
-from . models import TodoHolder
+from . models import Todo
 from . forms import TodoForm, TodoForm2
 
 
@@ -22,8 +22,8 @@ def landing(request):
 def home(request):
     form = TodoForm2()
     token = str(token_hex())[0:10]
-    items = TodoHolder.objects.filter(user=request.user).order_by("-date_created")
-    items_count = TodoHolder.objects.filter(user=request.user).count()
+    items = Todo.objects.filter(user=request.user).order_by("-date_created")
+    items_count = Todo.objects.filter(user=request.user).count()
     checker = False
     if items_count >= 2:
         checker = True
@@ -33,7 +33,7 @@ def home(request):
         form = TodoForm2(request.POST)
         if form.is_valid():
             item = form.cleaned_data["item"]
-            ins = TodoHolder.objects.create(user=request.user, item=item, ran_id=token, date_created=timezone.now())
+            ins = Todo.objects.create(user=request.user, item=item, ran_id=token, date_created=timezone.now())
             return redirect("home")
     context = {
         "items": items,
@@ -45,14 +45,14 @@ def home(request):
 
 @login_required(login_url="login")
 def delete_item(request, item_id):
-    item = TodoHolder.objects.get(ran_id=item_id)
+    item = Todo.objects.get(ran_id=item_id)
     item.delete()
     return redirect("home")
 
 
 @login_required(login_url="login")
 def update_item(request, item_id):
-    todo_item = TodoHolder.objects.get(ran_id=item_id)
+    todo_item = Todo.objects.get(ran_id=item_id)
     form = TodoForm(instance=todo_item)
     if request.method == "POST":
         form = TodoForm(request.POST, instance=todo_item)

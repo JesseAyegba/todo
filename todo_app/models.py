@@ -5,7 +5,7 @@ from django.utils import timezone
 
 
 
-class TodoHolder(models.Model):
+class Todo(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
     item = models.CharField(max_length=40, blank=False, null=True)
     ran_id = models.CharField(max_length=11, null=True)
@@ -13,6 +13,3 @@ class TodoHolder(models.Model):
 
     def __str__(self):
         return self.item
-
-
-
