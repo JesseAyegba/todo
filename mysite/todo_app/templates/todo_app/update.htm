@@ -1,0 +1,17 @@
+{% extends "todo_app/base.htm" %}
+{% load crispy_forms_tags %}
+
+{% block title %}Update{% endblock title %}
+{% block content %}
+<div class="content-wrapper">
+    <form method="POST">
+        {%csrf_token%}
+        <div class="form">
+            {{ form | crispy}}
+        </div>
+        <div class="todo-btn mt-2">
+            <button class="btn btn-outline-success" type="submit">Update</button>
+        </div>
+    </form>
+</div>
+{% endblock content %}

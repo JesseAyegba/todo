@@ -1,0 +1,37 @@
+{% extends 'todo_app/base.htm' %}
+{% load crispy_forms_tags %}
+
+{% block title %}Dashboard{% endblock title %}
+{% block content %}
+<div class="content-wrapper">
+    <form class="todo-form-wrapper" method="POST" action="{% url 'home' %}">
+        {% csrf_token %}
+        <div class="form">
+            {{ form | crispy }}
+        </div>
+        <div class="todo-btn">
+            <button class="btn btn-outline-success" type="submit">Add item</button>
+        </div>
+    </form>
+    <div class="items-wrapper">
+        <div class="ul-class">
+            {% for item in items %}
+            <div class="li-class">
+                <div class="item-wrapper">
+                    <a href="{% url 'update' item.ran_id %}">{{item.item}}</a>
+                </div>
+                <div class="delete-wrapper">
+                    <a class="btn btn-info btn-sm" href="{% url 'update' item.ran_id %}">Edit</a>
+                    <a class="btn btn-danger btn-sm" href="{% url 'delete-item' item.ran_id %}">Delete</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    {% if checker %}
+    <div class="todo-clear-btn mt-2">
+        <a href="{% url 'clear_list' %}" class="btn btn-outline-warning btn-sm" type="submit">Clear Entire list</a>
+    </div>
+    {% endif %}
+</div>
+{% endblock content %}
