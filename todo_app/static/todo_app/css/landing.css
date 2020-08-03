@@ -6,7 +6,7 @@ body {
     text-align: center;
     animation-name: body;
     animation-duration: 3s;
-    animation-fill-mode: forwards   ;
+    animation-fill-mode: forwards;
 }
 @keyframes body {
     0%{

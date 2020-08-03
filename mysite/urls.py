@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.urls import path, include
-from user_reg import views as user_views
 from django.contrib.auth import views as auth_views
+from user_reg import views as user_views
 
 
 urlpatterns = [

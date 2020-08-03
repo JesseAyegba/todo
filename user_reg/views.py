@@ -1,8 +1,8 @@
 from django.shortcuts import render, redirect
-from . forms import CreateUserForm, UserLoginForm
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 from . decorators import login_checker
+from . forms import CreateUserForm, UserLoginForm
 
 
 
@@ -46,3 +46,4 @@ def login_page(request):
 def logout_page(request):
     logout(request)
     return render(request, "user_reg/logout.htm")
+ 
