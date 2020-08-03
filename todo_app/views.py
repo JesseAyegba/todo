@@ -1,4 +1,4 @@
-from uuid import uuid4
+from secrets import token_hex
 
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
@@ -21,6 +21,7 @@ def landing(request):
 @login_required(login_url="login")
 def home(request):
     form = TodoForm2()
+    token = str(token_hex())[0:10]
     items = Todo.objects.filter(user=request.user).order_by("-date_created")
     items_count = Todo.objects.filter(user=request.user).count()
     checker = False
@@ -32,7 +33,7 @@ def home(request):
         form = TodoForm2(request.POST)
         if form.is_valid():
             item = form.cleaned_data["item"]
-            ins = Todo.objects.create(user=request.user, item=item, ran_id=uuid4(), date_created=timezone.now())
+            ins = Todo.objects.create(user=request.user, item=item, ran_id=token, date_created=timezone.now())
             return redirect("home")
     context = {
         "items": items,
