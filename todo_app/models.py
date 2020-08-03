@@ -5,10 +5,10 @@ from django.utils import timezone
 
 
 
-class Todo(models.Model):
+class TodoHolder(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
     item = models.CharField(max_length=40, blank=False, null=True)
-    ran_id = models.CharField(max_length=50, primary_key=True)
+    ran_id = models.CharField(max_length=11, null=True)
     date_created = models.DateTimeField("date created", null=True)
 
     def __str__(self):

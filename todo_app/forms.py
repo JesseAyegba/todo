@@ -1,6 +1,6 @@
 from django import forms
 from django.forms import ModelForm
-from . models import Todo
+from . models import TodoHolder
 
 
 class TodoForm(ModelForm):
@@ -10,7 +10,7 @@ class TodoForm(ModelForm):
     }))
     
     class Meta: 
-        model = Todo
+        model = TodoHolder
         fields = ["item"]
 
 
@@ -22,5 +22,5 @@ class TodoForm2(ModelForm):
     }))
     
     class Meta: 
-        model = Todo
+        model = TodoHolder
         fields = ["item"]
