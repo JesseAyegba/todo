@@ -1,6 +1,7 @@
 .vscode
 todo_venv
-db.sqlite3/
+db.sqlite3
 *.pyc
 __pycache__
 Procfile
+__pycache__
