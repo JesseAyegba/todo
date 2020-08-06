@@ -41,11 +41,9 @@ nav {
     }
 }
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Lobster', cursive;
+    font-family: 'Recursive', sans-serif;
 }
-/* label, span {
 
-} */
 .logo-wrapper {
     margin-left: 40px;
     transform: rotateZ(-15deg);
