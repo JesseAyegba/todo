@@ -17,9 +17,7 @@ nav {
     z-index: 2;
     top:0;
 }
-.logo-wrapper {
-    font-family: 'Lobster', cursive !important;
-}
+
 .main-message-wrapper {
     position: fixed;
     z-index: 2;
@@ -52,7 +50,7 @@ h1, h2, h3, h4, h5, h6 {
 .logo-wrapper {
     margin-left: 40px;
     transform: rotateZ(-15deg);
-    font-family: 'Lobster', cursive;
+    font-family: 'Lobster', cursive !important;
     position: relative;
     z-index: 2;
 
