@@ -1,7 +1,7 @@
 body {
     padding: 0px !important;
     margin: 0px !important;
-    /* background-color: rgb(221, 221, 221); */
+    background-color: rgb(221, 221, 221);
     background-color: #f4cbb2;
     
 }
@@ -16,6 +16,9 @@ nav {
     top: 0;
     z-index: 2;
     top:0;
+}
+.logo-wrapper {
+    font-family: 'Lobster', cursive !important;
 }
 .main-message-wrapper {
     position: fixed;
@@ -43,7 +46,9 @@ nav {
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Recursive', sans-serif;
 }
+/* label, span {
 
+} */
 .logo-wrapper {
     margin-left: 40px;
     transform: rotateZ(-15deg);
