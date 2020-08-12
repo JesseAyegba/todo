@@ -9,7 +9,12 @@
     <form action="" method="POST">
         {% csrf_token %}
         <div>
-            {{form | crispy }}
+            {% for field in form %}
+                <div class="field-wrapper">
+                    {{field.errors}}
+                    {{field}}
+                </div>
+            {% endfor %}
             <button class="btn-stretch btn btn-success" type="submit">Login</button>
         </div>
     </form>
