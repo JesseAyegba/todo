@@ -8,6 +8,7 @@ from django.contrib.auth.models import User
 from user_reg.decorators import login_checker
 from . models import Todo
 from . forms import TodoForm, TodoForm2
+from django.http import Http404
 
 
 
@@ -45,14 +46,20 @@ def home(request):
 
 @login_required(login_url="login")
 def delete_item(request, item_id):
-    item = Todo.objects.get(ran_id=item_id)
+    try:
+        item = Todo.objects.get(ran_id=item_id)
+    except Exception:
+        raise Http404("You don't seem to have such item in your record")
     item.delete()
     return redirect("home")
 
 
 @login_required(login_url="login")
 def update_item(request, item_id):
-    todo_item = Todo.objects.get(ran_id=item_id)
+    try:
+        todo_item = Todo.objects.get(ran_id=item_id)
+    except Exception:
+        raise Http404("You don't seem to have such item in your record")
     form = TodoForm(instance=todo_item)
     if request.method == "POST":
         form = TodoForm(request.POST, instance=todo_item)
