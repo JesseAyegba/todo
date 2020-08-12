@@ -10,14 +10,17 @@
         {% csrf_token %}
         <div class="form-wrapper">
             {% for field in form %}
-                <div class="field-wrapper">
-                    {{field.errors}}
-                    {{field}}
+            <div class="field-wrapper">
+                <div class="label-wrapper">
+                    {{field.label_tag}}
                 </div>
+                {{field}}
+                {{field.errors}}
+            </div>
             {% endfor %}
             <button class="btn-stretch btn btn-success" type="submit">Sign up</button>
         </div>
-    </form>  
+    </form>
     <p class="mt-2">Already have an account?<a href="{% url 'login' %}"> Login</a></p>
 </div>
 {% endblock content %}

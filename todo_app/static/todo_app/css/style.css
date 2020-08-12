@@ -1,6 +1,6 @@
 :root {
     --background-color: #d5c0f3;
-    --input-border-color: #24292e;
+    --input-border-color: lightgray;
     --nav-bg: #24292e ;
     --form-label: var(--nav-bg);
 }
@@ -188,10 +188,11 @@ h1, h2, h3, h4, h5, h6 {
     margin: 10px 0;
     padding: 20px;
     outline: none;
-    border: 1px var(--input-border-color) solid;
+    border: .5px var(--input-border-color) solid;
     transition: .5s;
     background-color: white;
 }
+
 .field-wrapper input:focus {
     border: 1px #24292e solid;
     box-shadow: 0 0 8px 0 #24292e;
@@ -207,6 +208,10 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0;
     font-size: 13px;
 
+}
+.label-wrapper label{
+    padding: 0;
+    margin: 0;
 }
 .logout-style {
     margin-top: 80px;

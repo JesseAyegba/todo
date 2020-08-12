@@ -10,10 +10,13 @@
         {% csrf_token %}
         <div>
             {% for field in form %}
-                <div class="field-wrapper">
-                    {{field.errors}}
-                    {{field}}
+            <div class="field-wrapper">
+                <div class="label-wrapper">
+                    {{field.label_tag}}
                 </div>
+                {{field}}
+                {{field.errors}}
+            </div>
             {% endfor %}
             <button class="btn-stretch btn btn-success" type="submit">Login</button>
         </div>
