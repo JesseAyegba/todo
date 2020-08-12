@@ -362,9 +362,9 @@ h1, h2, h3, h4, h5, h6 {
         position: absolute;
         top: 9%;
         left: 0;
-        background-color: rgb(19, 0, 37);
+        background-color: var(--nav-bg);
         height: 100vh;
-        width: 98vw;
+        width: 100vw;
         transform: translateX(-100%);
         transition: transform 0.5s;
         z-index: 1;
