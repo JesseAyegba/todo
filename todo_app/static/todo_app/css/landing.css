@@ -69,7 +69,7 @@ h5 {
 }
 .name {
     position: relative;
-    left: -1000px;
+    left: -1500px;
     animation-name: name;
     animation-duration: 1s;
     animation-delay: 1s;
