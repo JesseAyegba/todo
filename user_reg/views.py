@@ -20,7 +20,7 @@ def user_registration(request):
     context = {
         "form": form,
     }
-    return render(request, "user_reg/user_registration.htm", context)
+    return render(request, "user_registration.html", context)
 
 
 @login_checker
@@ -41,9 +41,9 @@ def login_page(request):
     context = {
         "form": form,
     }
-    return render(request, "user_reg/login.htm", context)
+    return render(request, "login.html", context)
 
 def logout_page(request):
     logout(request)
-    return render(request, "user_reg/logout.htm")
+    return render(request, "logout.html")
  

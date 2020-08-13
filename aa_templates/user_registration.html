@@ -1,14 +1,14 @@
-{% extends "todo_app/base.htm" %}
+{% extends "base.html" %}
 {% load crispy_forms_tags %}
 
-{% block title %}Login{% endblock title %}
+{% block title %}Registration{% endblock title %}
 {% block content %}
-<div class="login-form-wrapper">
-    <h4 class="display-4 text-center">Login</h4>
+<div class="reg-form-wrapper">
+    <h4 class="display-4 text-center">Sign Up</h4>
     <hr class="bg-light">
     <form action="" method="POST">
         {% csrf_token %}
-        <div>
+        <div class="form-wrapper">
             {% for field in form %}
             <div class="field-wrapper">
                 <div class="label-wrapper">
@@ -18,9 +18,9 @@
                 {{field.errors}}
             </div>
             {% endfor %}
-            <button class="btn-stretch btn btn-success" type="submit">Login</button>
+            <button class="btn-stretch btn btn-success" type="submit">Sign up</button>
         </div>
     </form>
-    <p class="mt-2">Don't have an account? <a href="{% url 'user_registration' %}">Sign up</a></p>
+    <p class="mt-2">Already have an account?<a href="{% url 'login' %}"> Login</a></p>
 </div>
 {% endblock content %}

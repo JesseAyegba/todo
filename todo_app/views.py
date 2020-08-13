@@ -16,7 +16,7 @@ from django.http import Http404
 
 @login_checker
 def landing(request):
-    return render(request, "todo_app/landing.htm")
+    return render(request, "landing.html")
 
 
 @login_required(login_url="login")
@@ -41,7 +41,7 @@ def home(request):
         "checker": checker,
         "form": form
     }
-    return render(request, "todo_app/index.htm", context)
+    return render(request, "index.html", context)
 
 
 @login_required(login_url="login")
@@ -70,7 +70,7 @@ def update_item(request, item_id):
     context = {
         "form": form
     }
-    return render(request, "todo_app/update.htm", context)
+    return render(request, "update.html", context)
 
 
 @login_required(login_url="login")
