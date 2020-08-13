@@ -5,10 +5,12 @@ from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.utils import timezone
 from django.contrib.auth.models import User
+from django.http import Http404
+
 from user_reg.decorators import login_checker
 from . models import Todo
 from . forms import TodoForm, TodoForm2
-from django.http import Http404
+
 
 
 
