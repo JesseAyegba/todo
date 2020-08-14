@@ -36,8 +36,15 @@ def home(request):
         form = TodoForm2(request.POST)
         if form.is_valid():
             item = form.cleaned_data["item"]
-            ins = Todo.objects.create(user=request.user, item=item, ran_id=token, date_created=timezone.now())
+            ins = Todo.objects.create(
+                                    user=request.user,
+                                    item=item, 
+                                    ran_id=token, 
+                                    date_created=timezone.now()
+                                )
+
             return redirect("home")
+            
     context = {
         "items": items,
         "checker": checker,
