@@ -88,7 +88,7 @@ DATABASES = {
         'HOST': 'localhost',
         'USER': 'postgres',
         'PORT': '5432',
-        'PASSWORD': 'avengers123'
+        'PASSWORD': os.environ["POSTGRES_PASSWORD"]
     }
 }
 
