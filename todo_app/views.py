@@ -8,6 +8,8 @@ from django.contrib.auth.models import User
 from django.http import Http404
 
 from user_reg.decorators import login_checker
+from user_reg.forms import ProfileUpdateForm
+
 from . models import Todo
 from . forms import TodoForm, TodoForm2
 
@@ -89,3 +91,19 @@ def clear_list(request):
     user_item_set.delete()
     return redirect("home")
     
+
+def profile(request):
+    user_profile_ins = request.user.profile
+    if request.method == "POST":
+        form = ProfileUpdateForm(request.POST, request.FILES, instance=user_profile_ins)
+        if form.is_valid():
+            messages.success(request, "Account successfully updated")
+            form.save()
+            return redirect("profile")
+    else:
+        form = ProfileUpdateForm(instance=user_profile_ins)
+    
+    context = {
+        "form": form,
+    }
+    return render(request, "profile.html", context)

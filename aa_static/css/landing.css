@@ -20,7 +20,7 @@ body {
         color: lightslategray;
     }
     100%{
-        background-color: #24292e;
+        background-color: rgb(19, 0, 37);
         color: white;
     }
 }

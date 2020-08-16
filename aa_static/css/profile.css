@@ -1,0 +1,110 @@
+.profile-wrapper {
+    width: 80%;
+    margin: 30px auto;
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: .2fr 1fr;
+
+}
+
+.pic-wrapper img{
+    height: 200px;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30%;
+    max-width: 200px;
+    border-radius: 50%;
+    border: 5px rgb(146, 144, 144) solid;
+    
+}  
+
+.pic-section {
+    background-color: whitesmoke;
+    padding: 30px;
+    margin: 30px;
+    color: rgb(19, 0, 37);
+    text-align: center;
+    border: 1px rgb(172, 165, 165) solid;
+}
+
+.text-section {
+    padding: 30px;
+    background-color: whitesmoke;
+    color: rgb(19, 0, 37);
+    margin: 30px;
+    border: 1px rgb(172, 165, 165) solid;
+}
+.fa {
+    color: rgb(19, 0, 37);
+}
+@media (max-width: 992px) {
+    .profile-wrapper {
+        width: 100%;
+        margin: 30px auto;
+        max-width: 1000px;
+        display: grid;
+        grid-template-columns: .2fr 1fr;
+    
+    }
+    .pic-section {
+        margin: 10px;
+        
+    }
+    
+    .text-section {
+        margin: 10px;
+    }
+}
+@media (max-width: 768px) {
+    .profile-wrapper {
+        width: 100%;
+        grid-template-columns: 1fr;
+    }
+    .pic-wrapper img{
+        height: 200px;
+        width: 200px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 0;
+    } 
+    .pic-section {
+        margin: 10px;
+        
+    }
+    
+    .text-section {
+        margin: 10px;
+    }
+}
+@media (max-width: 576px) {
+    .profile-wrapper {
+        width: 100%;
+        grid-template-columns: 1fr;
+    }
+    .pic-wrapper img{
+        height: 200px;
+        width: 200px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 0;
+    }
+    .pic-section {
+        margin: 10px;
+        
+    }
+    
+    .text-section {
+        margin: 10px;
+    }
+    .profile-username {
+        font-size: 1.5em;
+        font-weight: bold;
+    }
+    .profile-email {
+        font-size: 1.5em;
+    }
+
+}
+
+

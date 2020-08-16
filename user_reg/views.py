@@ -36,6 +36,8 @@ def login_page(request):
             if user is not None:
                 login(request, user)
                 return redirect("home")
+            else:
+                messages.warning(request, "You username or password is incorrect")
     else: 
         form = UserLoginForm()
     context = {
