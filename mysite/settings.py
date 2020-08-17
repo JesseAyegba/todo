@@ -26,7 +26,9 @@ SECRET_KEY = os.environ["TODO_SECRET_KEY"]
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = (os.environ["TODO_DEBUG_VALUE"] == "True")
 
-ALLOWED_HOSTS = ["todolistbyjesse.herokuapp.com"]       
+ALLOWED_HOSTS = [
+    os.environ["ALLOWED_HOSTS"],
+    ]       
 
 
 # Application definition
