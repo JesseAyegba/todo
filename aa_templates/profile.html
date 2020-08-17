@@ -7,7 +7,7 @@
         <div class=" pic-section">
             <h1>Profile</h1>
             <div class="pic-wrapper">
-                <img src="{{ user.profile.picture.url }}" alt="Profile Pic">
+                <img src="https://todolistbyjesse.s3.us-east-2.amazonaws.com/media/{{ user.profile.picture }}" alt="Profile Pic">
             </div>
             <a class="margin-top" href="{% url "home" %}">
                 <button class="btn btn-outline-secondary btn-sm mt-4 margin-top">

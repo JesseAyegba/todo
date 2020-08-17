@@ -4,6 +4,7 @@
     max-width: 1000px;
     display: grid;
     grid-template-columns: .2fr 1fr;
+    min-width: 400px;
 
 }
 
@@ -79,7 +80,7 @@
 }
 @media (max-width: 576px) {
     .profile-wrapper {
-        width: 100%;
+        width: 500px;
         grid-template-columns: 1fr;
     }
     .pic-wrapper img{
