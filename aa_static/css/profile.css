@@ -59,7 +59,6 @@
 }
 @media (max-width: 768px) {
     .profile-wrapper {
-        width: 100%;
         grid-template-columns: 1fr;
     }
     .pic-wrapper img{
@@ -70,12 +69,12 @@
         margin-top: 0;
     } 
     .pic-section {
-        margin: 10px;
+        margin-bottom: 10px;
         
     }
     
     .text-section {
-        margin: 10px;
+        margin-top: 10px;
     }
 }
 @media (max-width: 576px) {
