@@ -4,27 +4,30 @@
 {% block title %}Profile{% endblock title %}
 {% block content %}
 <div class="profile-wrapper">
-        <div class=" pic-section">
-            <h1>Profile</h1>
-            <div class="pic-wrapper">
-                <img src="https://todolistbyjesse.s3.us-east-2.amazonaws.com/media/{{ user.profile.picture }}" alt="Profile Pic">
-            </div>
-            <a class="margin-top" href="{% url "home" %}">
-                <button class="btn btn-outline-secondary btn-sm mt-4 margin-top">
-                    <i class="fa fa-arrow-circle-left" aria-hidden="true"></i>
-                    Back
-                </button>
-            </a>
+    <div class=" pic-section">
+        <h1>Profile</h1>
+        <div class="pic-wrapper">
+            <img src="https://todolistbyjesse.s3.us-east-2.amazonaws.com/media/{{ user.profile.picture }}"
+                alt="Profile Pic">
         </div>
-        <div class="text-section">
-            <h1 class="profile-username">{{ user.username }}</h1>
-            <h3 class="profile-email">{{ user.email }}</h3>
-            <p class="text-muted">Only you can see this</p>
-            <form method="POST" enctype="multipart/form-data">
+        <a class="margin-top" href="{% url "home" %}">
+            <button class="btn btn-outline-secondary btn-sm mt-4 margin-top">
+                <i class="fa fa-arrow-circle-left" aria-hidden="true"></i>
+                Back
+            </button>
+        </a>
+    </div>
+    <div class="text-section">
+        <h1 class="profile-username">{{ user.username }}</h1>
+        <h3 class="profile-email">{{ user.email }}</h3>
+        <p class="text-muted">Only you can see this</p>
+        <form method="POST" enctype="multipart/form-data">
             {% csrf_token %}
-            {{ form | crispy }}
+            <div class="profile-input">
+                {{ form | crispy }}
+            </div>
             <button class="btn btn-success">Update Profile</button>
-            </form>
-        </div>
+        </form>
+    </div>
 </div>
 {% endblock content %}

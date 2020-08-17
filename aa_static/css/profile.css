@@ -80,23 +80,22 @@
 }
 @media (max-width: 576px) {
     .profile-wrapper {
-        width: 500px;
         grid-template-columns: 1fr;
     }
     .pic-wrapper img{
-        height: 200px;
-        width: 200px;
+        box-sizing: border-box;
+        height: 100px;
+        width: 100px;
         margin-left: auto;
         margin-right: auto;
-        margin-top: 0;
     }
     .pic-section {
-        margin: 10px;
+        margin-bottom: 10px;
         
     }
     
     .text-section {
-        margin: 10px;
+        margin-top: 10px;
     }
     .profile-username {
         font-size: 1.5em;
@@ -105,7 +104,7 @@
     .profile-email {
         font-size: 1.5em;
     }
-
+    
 }
 
 
