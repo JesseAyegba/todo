@@ -206,8 +206,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .field-wrapper input:focus {
-    border: 1px var(--input-border-color) solid;
-    box-shadow: 0 0 8px 0 #24292e;
+    border: 1px dodgerblue solid;
+    box-shadow: 0 0 8px 0 dodgerblue;
 }
 .errorlist {
     margin: 0;
