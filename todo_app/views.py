@@ -97,7 +97,7 @@ def profile(request):
     if request.method == "POST":
         form = ProfileUpdateForm(request.POST, request.FILES, instance=user_profile_ins)
         if form.is_valid():
-            messages.success(request, "Account successfully updated")
+            messages.success(request, "Profile successfully updated")
             form.save()
             return redirect("profile")
     else:
