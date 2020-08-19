@@ -32,10 +32,6 @@ class UserLoginForm(forms.Form):
     username = forms.CharField(max_length=30)
     password = forms.CharField(max_length=30, widget=forms.PasswordInput)
 
-    def clean_username(self):
-        username = self.cleaned_data["username"]
-        all_users = User.objects.all()
-
 
 class ProfileUpdateForm(forms.ModelForm):
     class Meta:
