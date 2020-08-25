@@ -262,14 +262,14 @@ h1, h2, h3, h4, h5, h6 {
         width: 60%;
         border-radius: 5px;
         padding: 10px;
-        margin: 100px auto;
+        margin: 25px auto;
     }
     .reg-form-wrapper {
         transition: 0.5s;
         width: 60%;
         height: 100%;
         border-radius: 10px;
-        margin: 100px auto;
+        margin: 25px auto;
         padding: 10px;
         
     }
@@ -300,14 +300,14 @@ h1, h2, h3, h4, h5, h6 {
         width: 70%;
         border-radius: 5px;
         padding: 10px;
-        margin: 100px auto;
+        margin: 25px auto;
     }
     .reg-form-wrapper {
         transition: 0.5s;
         width: 70%;
         height: 100%;
         border-radius: 10px;
-        margin: 100px auto;
+        margin: 25px auto;
         padding: 10px;
         
     }
@@ -372,13 +372,13 @@ h1, h2, h3, h4, h5, h6 {
         transition:0.5s;
         width: 80%;
         padding: 10px;
-        margin: 100px auto;
+        margin: 25px auto;
     }
     .reg-form-wrapper {
         transition: 0.5s;
         width: 80%;
         height: 100%;
-        margin: 100px auto;
+        margin: 25px auto;
         padding: 10px;
         
     }
