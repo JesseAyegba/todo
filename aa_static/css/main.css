@@ -173,7 +173,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .login-form-wrapper {
     transition:0.5s;
-    width: 40%;
+    width: 35%;
     border-radius: 10px;
     padding: 10px;
     margin: 25px auto;
@@ -183,7 +183,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .reg-form-wrapper {
     transition: 0.5s;
-    width: 40%;
+    width: 35%;
     height: 100%;
     color: var(--form-label);
     border-radius: 10px;
