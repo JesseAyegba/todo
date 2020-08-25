@@ -10,14 +10,13 @@
 }
 
 .pic-wrapper img{
-    height: 200px;
-    width: 100px;
+    height: 230px;
+    width: 150px;
     object-fit: contain;
     margin-left: auto;
     margin-right: auto;
     margin-top: 30%;
     max-width: 200px;
-    border: 5px rgb(146, 144, 144) solid;
     
 }  
 
