@@ -5,12 +5,13 @@
     display: grid;
     grid-template-columns: .2fr 1fr;
     min-width: 400px;
+    box-sizing: border-box;
 
 }
 
 .pic-wrapper img{
     height: 200px;
-    width: 130px;
+    width: 30%;
     margin-left: auto;
     margin-right: auto;
     margin-top: 30%;
@@ -61,8 +62,6 @@
         grid-template-columns: 1fr;
     }
     .pic-wrapper img{
-        height: 200px;
-        width: 200px;
         margin-left: auto;
         margin-right: auto;
         margin-top: 0;
@@ -82,8 +81,6 @@
     }
     .pic-wrapper img{
         box-sizing: border-box;
-        height: 100px;
-        width: 100px;
         margin-left: auto;
         margin-right: auto;
     }
