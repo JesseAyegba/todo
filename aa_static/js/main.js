@@ -10,6 +10,7 @@ $(document).ready(function() {
 
 
 
+
     $burger.on("click", function() {
         $navLinksWrapper.toggleClass("toggle-nav");   
         $(this).toggleClass("cross");
@@ -29,5 +30,9 @@ $(document).ready(function() {
     })
     $login_password.attr({
         "placeholder": "Password"
+    });
+
+    window.on("load", () => {
+        $username.focus();
     });
 })
