@@ -35,4 +35,9 @@ $(document).ready(function() {
     window.addEventListener("load", () => {
         $username.focus();
     });
+
+    $(".todo-form-wrapper").on("submit", () => {
+        $(".todo-form-wrapper .form .form-group div input").focus(); 
+    });
+
 })
