@@ -32,7 +32,7 @@ $(document).ready(function() {
         "placeholder": "Password"
     });
 
-    window.on("load", () => {
+    window.addEventListener("load", () => {
         $username.focus();
     });
 })
